@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bucket List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>My Personal Bucket List</h1>
+    </header>
+    <main>
+        <ul class="bucket-list" id="bucketList">
+            <li class="completed"><i class="fas fa-check-circle"></i> Visit Japan <button onclick="toggleCompletion(this)">◉</button></li>
+            <li><i class="far fa-circle"></i> Learn Skydiving <button onclick="toggleCompletion(this)">❌</button></li>
+            <li><i class="far fa-circle"></i> Write a Book <button onclick="toggleCompletion(this)">❌</button></li>
+            <li class="completed"><i class="fas fa-check-circle"></i> Run a Marathon <button onclick="toggleCompletion(this)">◉</button></li>
+            <li><i class="far fa-circle"></i> See the Northern Lights <button onclick="toggleCompletion(this)">❌</button></li>
+        </ul>
+        <button id="addItemButton" onclick="addItem()">READY TO ADD MORE!</button>
+    </main>
+    <footer>
+        <p>&copy; 2025 My Bucket List. Dream Big!</p>
+    </footer>
+    <script>
+        function toggleCompletion(button) {
+            let listItem = button.parentElement;
+            listItem.classList.toggle("completed");
+            let icon = listItem.querySelector("i");
+            if (listItem.classList.contains("completed")) {
+                icon.classList.replace("far", "fas");
+                icon.classList.replace("fa-circle", "fa-check-circle");
+                button.textContent = "◉";
+            } else {
+                icon.classList.replace("fas", "far");
+                icon.classList.replace("fa-check-circle", "fa-circle");
+                button.textContent = "❌";
+            }
+        }
+        
+        function addItem() {
+            let newItem = prompt("Enter a new bucket list item:");
+            if (newItem) {
+                let ul = document.getElementById("bucketList");
+                let li = document.createElement("li");
+                li.innerHTML = `<i class='far fa-circle'></i> ${newItem} <button onclick='toggleCompletion(this)'>❌</button>`;
+                ul.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>

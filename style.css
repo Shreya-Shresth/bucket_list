@@ -1,0 +1,108 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://www.shutterstock.com/image-vector/gaming-vector-background-landscape-video-600nw-2308922901.jpg');
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/046/087/918/non_2x/a-breathtaking-scene-of-natures-beauty-where-colorful-flowerbeds-bloom-in-harmony-with-the-lush-green-lawns-of-a-tranquil-public-park-photo.jpg');
+    background-position: center;
+    color: white;
+    font-family: 'sans-serif';
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.bucket-list {
+    list-style: none;
+    padding: 0;
+    max-width: 400px;
+    margin: 30px auto;
+}
+
+.bucket-list li {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+.bucket-list li:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+    background: #ede43b; /* Light blue background on hover */
+}
+
+.completed {
+    background: #d3ffd3;
+    text-decoration: line-through;
+}
+
+.completed i {
+    color: green;
+}
+
+.not-completed button {
+    font-weight: bold;
+    color: burlywood;
+}
+#addItemButton {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+#addItemButton:hover {
+    background-color: rgb(125, 139, 0);
+}
+
+
+button {
+    background: beige;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background:green;
+}
+
+footer {
+    background-image:url('https://t4.ftcdn.net/jpg/02/17/00/79/360_F_217007945_kSszXIfoAqBdZhBbOQATmGaoMHTeS6W2.jpg');
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 10px;
+}
