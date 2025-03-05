@@ -13,4 +13,4 @@ Technologies Used
 
 HTML: Structure of the webpage.
 CSS: Styling and layout design.
-To see the project live : click here https://bucket-list-chi.vercel.app/
+To see the project live: click here https://bucket-list-chi.vercel.app/
